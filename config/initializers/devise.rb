@@ -16,6 +16,10 @@ Devise.setup do |config|
   # by default. You can change it below and use your own secret key.
   # config.secret_key = 'd5ad6d5532c772484651eeafcee547666c025b62f4110d1f76d9960b8d1134d382683d5343035d9099c262b21661737126b7c33244c24f74c6d2baaaaeb5e961'
 
+  config.jwt do |jwt|
+    jwt.secret = 'SECRET' #TODO: update to application.yml
+  end
+
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
   # config.parent_controller = 'DeviseController'
