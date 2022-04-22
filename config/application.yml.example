@@ -1,0 +1,5 @@
+development:
+  jwt_secret: # Generate with: $ openssl rand -base64 32
+
+test:
+  jwt_secret: # Generate with: $ openssl rand -base64 32

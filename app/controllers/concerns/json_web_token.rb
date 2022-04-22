@@ -3,8 +3,7 @@ require 'jwt'
 module JsonWebToken
   extend ActiveSupport::Concern
 
-  #JWT_SECRET = Rails.application.jwt_secret
-  JWT_SECRET = 'SECRET' #TODO: migrate to env
+  JWT_SECRET = ENV['jwt_secret']
 
   def jwt_encode(payload, exp = 7.days.from_now)
     payload[:exp] = exp.to_i
