@@ -6,6 +6,11 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
+      # users and auth
+      resources :users
+      post 'auth/login', to: 'auth#login'
+
+      # domain
       resources :teams do
         resources :students
       end

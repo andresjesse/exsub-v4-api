@@ -1,0 +1,5 @@
+development:
+  jwt_secret: 4y3OATGgrkKm9HwflVlt4WKPnz5235B/D2zMeTdOEnI= #$ openssl rand -base64 32
+
+test:
+  jwt_secret: 4y3OATGgrkKm9HwflVlt4WKPnz5235B/D2zMeTdOEnI= #$ openssl rand -base64 32
