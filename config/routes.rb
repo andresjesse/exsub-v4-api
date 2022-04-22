@@ -4,11 +4,13 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
 
-  resources :users
-  post 'auth/login', to: 'auth#login'
-
   namespace :api do
     namespace :v1 do
+      # users and auth
+      resources :users
+      post 'auth/login', to: 'auth#login'
+
+      # domain
       resources :teams do
         resources :students
       end
