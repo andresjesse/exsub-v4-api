@@ -10,6 +10,11 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
+  def login_and_extract_token(email, password)
+    post api_v1_auth_login_path, params: {email: email, password: password }
+    json = JSON.parse(response.body)
+    json["token"]
+  end
 end
 
 Shoulda::Matchers.configure do |config|
